@@ -30,16 +30,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Set up the Toolbar
-        setSupportActionBar(binding.toolbar)
-
-        // Set up the Navigation Drawer
-        toggle = ActionBarDrawerToggle(
-            this,
-            binding.drawerLayout,
-            binding.toolbar,
-            R.string.navigation_drawer_open,
-            R.string.navigation_drawer_close
-        )
+//        setSupportActionBar(binding.toolbar)
+//
+//        // Set up the Navigation Drawer
+//        toggle = ActionBarDrawerToggle(
+//            this,
+//            binding.drawerLayout,
+//            binding.toolbar,
+//            R.string.navigation_drawer_open,
+//            R.string.navigation_drawer_close
+//        )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -93,64 +93,64 @@ class MainActivity : AppCompatActivity() {
         )
 
         // Setup ViewPager2 for Banner
-        binding.bannerViewPager.adapter = BannerAdapter(banners)
-        binding.bannerViewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-
-        // Attach dots indicator
-        TabLayoutMediator(binding.bannerIndicator, binding.bannerViewPager) { _, _ -> }.attach()
-
-        // Auto-slide logic
-        binding.bannerViewPager.registerOnPageChangeCallback(object :
-            ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                binding.bannerViewPager.postDelayed({
-                    binding.bannerViewPager.currentItem =
-                        (binding.bannerViewPager.currentItem + 1) % banners.size
-                }, 3000) // Auto-slide every 3 seconds
-            }
-        })
-
-        // Enable marquee effect for bannerText
-        binding.bannerText.isSelected = true
-
-        // Set up RecyclerView for services
-        val services = listOf(
-            Service("হাসপাতাল", R.drawable.ic_hospital),
-            Service("ক্লিনিক", R.drawable.ic_clinic),
-            Service("ডায়াগনস্টিক", R.drawable.ic_diagnostic),
-            Service("বিশেষজ্ঞ ডাক্তার", R.drawable.ic_doctor),
-            Service("হোমিও ডাক্তার", R.drawable.ic_homeo),
-            Service("পশু ডাক্তার", R.drawable.ic_vet),
-            Service("হাসপাতাল", R.drawable.ic_hospital),
-            Service("ক্লিনিক", R.drawable.ic_clinic),
-            Service("ডায়াগনস্টিক", R.drawable.ic_diagnostic),
-            Service("বিশেষজ্ঞ ডাক্তার", R.drawable.ic_doctor),
-            Service("হোমিও ডাক্তার", R.drawable.ic_homeo),
-            Service("পশু ডাক্তার", R.drawable.ic_vet),
-            Service("হাসপাতাল", R.drawable.ic_hospital),
-            Service("ক্লিনিক", R.drawable.ic_clinic),
-            Service("ডায়াগনস্টিক", R.drawable.ic_diagnostic),
-            Service("বিশেষজ্ঞ ডাক্তার", R.drawable.ic_doctor),
-            Service("হোমিও ডাক্তার", R.drawable.ic_homeo),
-            Service("পশু ডাক্তার", R.drawable.ic_vet)
-        )
-
-        val adapter = ServiceAdapter(services)
-        binding.servicesRecyclerView.layoutManager = GridLayoutManager(this, 4)
-        binding.servicesRecyclerView.adapter = adapter
-
-        // Add layout animation to RecyclerView
-        binding.servicesRecyclerView.layoutAnimation =
-            AnimationUtils.loadLayoutAnimation(this, R.anim.grid_layout_animation)
-
-        // Add click listener to RecyclerView items
-        binding.servicesRecyclerView.addOnItemTouchListener(
-            RecyclerItemClickListener(this) { _, position ->
-                val service = services[position]
-                Toast.makeText(this, "Clicked: ${service.name}", Toast.LENGTH_SHORT).show()
-            }
-        )
+//        binding.bannerViewPager.adapter = BannerAdapter(banners)
+//        binding.bannerViewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+//
+//        // Attach dots indicator
+//        TabLayoutMediator(binding.bannerIndicator, binding.bannerViewPager) { _, _ -> }.attach()
+//
+//        // Auto-slide logic
+//        binding.bannerViewPager.registerOnPageChangeCallback(object :
+//            ViewPager2.OnPageChangeCallback() {
+//            override fun onPageSelected(position: Int) {
+//                super.onPageSelected(position)
+//                binding.bannerViewPager.postDelayed({
+//                    binding.bannerViewPager.currentItem =
+//                        (binding.bannerViewPager.currentItem + 1) % banners.size
+//                }, 3000) // Auto-slide every 3 seconds
+//            }
+//        })
+//
+//        // Enable marquee effect for bannerText
+//        binding.bannerText.isSelected = true
+//
+//        // Set up RecyclerView for services
+//        val services = listOf(
+//            Service("হাসপাতাল", R.drawable.ic_hospital),
+//            Service("ক্লিনিক", R.drawable.ic_clinic),
+//            Service("ডায়াগনস্টিক", R.drawable.ic_diagnostic),
+//            Service("বিশেষজ্ঞ ডাক্তার", R.drawable.ic_doctor),
+//            Service("হোমিও ডাক্তার", R.drawable.ic_homeo),
+//            Service("পশু ডাক্তার", R.drawable.ic_vet),
+//            Service("হাসপাতাল", R.drawable.ic_hospital),
+//            Service("ক্লিনিক", R.drawable.ic_clinic),
+//            Service("ডায়াগনস্টিক", R.drawable.ic_diagnostic),
+//            Service("বিশেষজ্ঞ ডাক্তার", R.drawable.ic_doctor),
+//            Service("হোমিও ডাক্তার", R.drawable.ic_homeo),
+//            Service("পশু ডাক্তার", R.drawable.ic_vet),
+//            Service("হাসপাতাল", R.drawable.ic_hospital),
+//            Service("ক্লিনিক", R.drawable.ic_clinic),
+//            Service("ডায়াগনস্টিক", R.drawable.ic_diagnostic),
+//            Service("বিশেষজ্ঞ ডাক্তার", R.drawable.ic_doctor),
+//            Service("হোমিও ডাক্তার", R.drawable.ic_homeo),
+//            Service("পশু ডাক্তার", R.drawable.ic_vet)
+//        )
+//
+//        val adapter = ServiceAdapter(services)
+//        binding.servicesRecyclerView.layoutManager = GridLayoutManager(this, 4)
+//        binding.servicesRecyclerView.adapter = adapter
+//
+//        // Add layout animation to RecyclerView
+//        binding.servicesRecyclerView.layoutAnimation =
+//            AnimationUtils.loadLayoutAnimation(this, R.anim.grid_layout_animation)
+//
+//        // Add click listener to RecyclerView items
+//        binding.servicesRecyclerView.addOnItemTouchListener(
+//            RecyclerItemClickListener(this) { _, position ->
+//                val service = services[position]
+//                Toast.makeText(this, "Clicked: ${service.name}", Toast.LENGTH_SHORT).show()
+//            }
+//        )
 
         // Set up bottom navigation
         binding.bottomNavigation.setOnItemSelectedListener { item ->
