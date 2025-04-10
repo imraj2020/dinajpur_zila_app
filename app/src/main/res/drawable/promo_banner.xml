@@ -1,0 +1,37 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="120dp"
+    android:viewportWidth="300"
+    android:viewportHeight="120">
+
+    <!-- Background: Green and White Split -->
+    <path
+        android:fillColor="#388E3C"
+        android:pathData="M0,0H150V120H0Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M150,0H300V120H150Z" />
+
+    <!-- Red Cross Symbol -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M130,40H150V60H170V80H150V100H130V80H110V60H130Z" />
+
+    <!-- Hospital Name Placeholder (Simplified) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,20H100V30H20Z M20,35H80V45H20Z" />
+
+    <!-- Contact Info Placeholder (Simplified) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M180,80H280V90H180Z M180,95H260V105H180Z" />
+
+    <!-- Decorative Elements (Simplified) -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M0,0H10V120H0Z" />
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M290,0H300V120H290Z" />
+</vector>

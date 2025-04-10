@@ -1,0 +1,58 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="150dp"
+    android:viewportWidth="300"
+    android:viewportHeight="150">
+
+    <!-- Sky Background -->
+    <path
+        android:fillColor="@color/primary_color_light"
+        android:pathData="M0,0H300V150H0Z" />
+
+    <!-- Ground -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M0,100H300V150H0Z" />
+
+    <!-- Train Tracks -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M0,110H300V112H0Z" />
+    <path
+        android:fillColor="#795548"
+        android:pathData="M0,115H300V117H0Z" />
+    <path
+        android:fillColor="#795548"
+        android:pathData="M0,122H300V124H0Z" />
+    <path
+        android:fillColor="#795548"
+        android:pathData="M0,127H300V129H0Z" />
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M0,112H300V115H0Z" />
+    <path
+        android:fillColor="#B0BEC5"
+        android:pathData="M0,124H300V127H0Z" />
+
+    <!-- INDIA Text -->
+    <group>
+        <clip-path android:pathData="M0,0H300V150H0Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M20,80H80V90H20Z" />
+        <path
+            android:fillColor="#000000"
+            android:pathData="M30,82H32V88H30Z M34,82H38V84H34Z M34,86H38V88H34Z M40,82H42V88H40Z M44,82H48V84H44Z M44,86H48V88H44Z M50,82H52V88H50Z M54,82H58V84H54Z M54,86H58V88H54Z M60,82H62V88H60Z M64,82H68V84H64Z M64,86H68V88H64Z M70,82H72V88H70Z M74,82H78V84H74Z M74,86H78V88H74Z" />
+    </group>
+
+    <!-- BANGLADESH Text -->
+    <group>
+        <clip-path android:pathData="M0,0H300V150H0Z" />
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M220,80H280V90H220Z" />
+        <path
+            android:fillColor="#000000"
+            android:pathData="M230,82H232V88H230Z M234,82H238V84H234Z M234,86H238V88H234Z M240,82H242V88H240Z M244,82H248V84H244Z M244,86H248V88H244Z M250,82H252V88H250Z M254,82H258V84H254Z M254,86H258V88H254Z M260,82H262V88H260Z M264,82H268V84H264Z M264,86H268V88H264Z M270,82H272V88H270Z M274,82H278V84H274Z M274,86H278V88H274Z" />
+    </group>
+</vector>

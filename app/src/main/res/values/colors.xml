@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Dark Theme (Teal-Based) -->
+    <color name="primary_color">#00695C</color>
+    <color name="on_primary_color">#FFFFFF</color>
+    <color name="secondary_color">#26A69A</color>
+    <color name="background_color">#121212</color>
+    <color name="surface_color">#212121</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0BEC5</color>
+    <color name="hint_color">#B0BEC5</color>
+    <color name="error_color">#CF6679</color>
+    <color name="warning_color">#FFB300</color>
+    <color name="selected_color">#26A69A</color>
+    <color name="unselected_color">#B0BEC5</color>
+
+    <!-- Light Theme (Blue-Based) -->
+    <color name="primary_color_light">#0762A9</color> <!-- Muted Teal -->
+    <color name="on_primary_color_light">#FFFFFF</color> <!-- White -->
+    <color name="secondary_color_light">#73A9AD</color> <!-- Muted Teal -->
+    <color name="background_color_light">#FFFFFF</color> <!-- White -->
+    <color name="surface_color_light">#FAFAFA</color> <!-- Soft White -->
+    <color name="text_primary_light">#212121</color> <!-- Darkened Teal, matched to #73A9AD -->
+    <color name="text_secondary_light">#757575</color> <!-- Gray -->
+    <color name="hint_color_light">#757575</color> <!-- Gray -->
+    <color name="error_color_light">#D32F2F</color> <!-- Muted Red -->
+    <color name="warning_color_light">#FFB300</color> <!-- Subtle Gold -->
+    <color name="selected_color_light">#73A9AD</color> <!-- Muted Teal -->
+    <color name="unselected_color_light">#757575</color> <!-- Gray -->
+
+
+    <color name="background_light">#F7F8FA</color> <!-- Light gray -->
+    <color name="dialog_button_positive">#FF6200EE</color> <!-- Purple for positive -->
+    <color name="dialog_button_negative">#FF757575</color> <!-- Grey for negative -->
+</resources>
