@@ -18,16 +18,15 @@
         android:theme="@style/Theme.DinajpurZilaApp"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".OtpVerificationActivity"
+            android:exported="false" />
         <activity
             android:name=".screen.auth.RegistrationActivity"
             android:exported="false" />
-
         <activity
             android:name=".screen.auth.LoginActivity"
             android:exported="false" />
-
-
         <activity
             android:name=".screen.WelcomePageActivity"
             android:exported="true">

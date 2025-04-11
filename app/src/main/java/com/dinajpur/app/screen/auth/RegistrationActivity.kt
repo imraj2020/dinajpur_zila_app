@@ -1,5 +1,6 @@
 package com.dinajpur.app.screen.auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.dinajpur.app.DataClass.RegisterRequest
 import com.dinajpur.app.DataClass.RegisterResponse
+import com.dinajpur.app.OtpVerificationActivity
 import com.dinajpur.app.R
 import com.dinajpur.app.databinding.ActivityRegistrationBinding
 import com.dinajpur.app.network.ApiClient
@@ -131,7 +133,10 @@ class RegistrationActivity : AppCompatActivity() {
                             val data = response.body()
                             data?.let {
                                 Log.d("API_SUCCESS", "Message: ${it.message}, OTP: ${it.verifyCode}")
-                                // এখানে OTP ভেরিফিকেশনের স্ক্রিনে নিয়ে যেতে পারো
+                                val intent = Intent(this@RegistrationActivity, OtpVerificationActivity::class.java)
+                                intent.putExtra("Otp",it.verifyCode)
+                                startActivity(intent)
+                                finish()
                             }
                         } else {
                             Log.e("API_ERROR", "Response failed: ${response.errorBody()?.string()}")
@@ -152,6 +157,7 @@ class RegistrationActivity : AppCompatActivity() {
 
     }
 
+
     private fun showError(message: String) {
         Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()
     }
@@ -159,4 +165,11 @@ class RegistrationActivity : AppCompatActivity() {
     private fun showSuccess(message: String) {
         Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG).show()
     }
+
+ fun  movetootppage(){
+
+
+     val intent = Intent(this, RegistrationActivity::class.java)
+     startActivity(intent)
+ }
 }
